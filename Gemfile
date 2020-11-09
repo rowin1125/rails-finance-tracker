@@ -51,16 +51,16 @@ group :development do
   gem 'pry', '~> 0.13.1'
 end
 
-group :production do
-  gem 'pg'
-end
-
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+end
+
+group :production do
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
