@@ -1,4 +1,20 @@
 <h1>Friends</h1>
+<div class="search-area">
+  <%= form_tag search_friend_path, remote: true, method: :get do %>
+    <div class="form-group row">
+      <div class="col-sm-9 pr-0">
+        <%= text_field_tag :friend, params[:friend], placeholder: "Example: Rowin", autofucos: true, class: 'form-control form-control-lg'%>
+      </div>
+      <div class="col-sm-3 pl-0">
+        <%= button_tag type: :submit, class: 'btn btn-success' do %>
+          <%= fa_icon 'search 2x' %>
+        <% end %>
+      </div>
+    </div>
+  <% end%>
+</div>
+<div id="friend-results">
+</div>
 <% if !@friends.empty? %>
   <%= render 'friends/list' %>
 <% end %>
